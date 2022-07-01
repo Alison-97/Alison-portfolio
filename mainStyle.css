@@ -1,18 +1,16 @@
-
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    background-image: url(canvas/scenery-morning.svg);
-    /* background-size: 100%; */
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #445C7F;
-    overflow-x: hidden;
-    text-shadow: 0 0 3px transparent;
+body {
+  margin: 0;
+  background-image: url(canvas/scenery-morning.svg);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #445c7f;
+  overflow-x: hidden;
+  text-shadow: 0 0 3px transparent;
 }
 
 #wrapper {
@@ -21,8 +19,9 @@ body{
   position: absolute;
   top: 5%;
   right: 5%;
-  /* border: yellow solid; */
   z-index: -1;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 #mainCanva {
@@ -30,158 +29,123 @@ body{
   height: 100%;
 }
 
-
-/* 
-@media only screen and (max-width: 850px) {
-  #wrapper {
-    width: 80vw;
-    height: 80vw;
-  }
+.navbar {
+  display: flex;
+  margin-top: 4%;
+  margin-left: 4%;
 }
 
-@media only screen and (max-width: 530px) {
-  body {
-    background-color: yellow;
-  }
-  #wrapper {
-    width: 90vw;
-    height: 90vw;
-  }
-  #day {
-    visibility: hidden;
-  }
-} */
-
-.navbar{
-    display: flex;
-    margin-top: 4%;
-    margin-left: 4%;
-    /* border: blue solid; */
+.navbar a {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-right: 3%;
+  text-decoration: none;
+  font-size: 20px;
+  color: inherit;
 }
 
-.navbar a{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-right: 3%;
-    text-decoration: none;
-    font-size: 20px;
-    color: inherit;
-    /* border: red solid; */
-}
-
-#logo{
+#logo {
   margin-right: 3%;
   width: 5%;
+  object-fit: contain;
 }
 
-#mode-img{
+#mode-img {
   object-fit: contain;
   cursor: pointer;
 }
 
-
-h1{
-  font-family: 'Patrick Hand', cursive;
-    font-size: 4em;
+h1 {
+  font-family: "Patrick Hand", cursive;
+  font-size: 4em;
 }
 
-#intro{
-    width: 40%;
-    margin-left: 10%;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* color: #333F50; */
-    /* border: red solid; */
+#intro {
+  width: 38%;
+  margin-left: 8%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#intro h1{
-    margin: 0;
+#intro h1 {
+  margin: 0;
 }
 
-#intro h2{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 80%;
+#intro h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 80%;
 }
 
 #about {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    width: 80%;
-    margin: auto;
-    position: relative;
-    /* border: red solid; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 80%;
+  margin: auto;
+  position: relative;
 }
 
 #about h2 {
-    width: 50%;
-    /* font-family: 'Oswald', sans-serif; */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* border: red solid; */
+  width: 60%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-#profile-pic{
-    position: absolute;
-    top: 42%;
-    left: 15%;
-    width: 25%;
-    border-radius: 50%;;
+#profile-pic {
+  position: absolute;
+  top: 42%;
+  left: 10%;
+  width: 25%;
+  border-radius: 50%;
 }
 
-#education{
-    height: 80vh;
-    /* border: red solid; */
-    position: absolute;
-    transform: translateY(15%);
-    left: 10%;
-    width: 80%;
+#education {
+  height: auto;
+  position: absolute;
+  transform: translateY(15%);
+  left: 10%;
+  width: 80%;
 }
 
-
-.edu-content{
-    width: 100%;
-    display:flex;
-    align-items: center;
-    margin-bottom: 3%;
+.edu-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3%;
 }
 
 .icon {
-    margin-left: 10%;
-    margin-right: 4%;
-    width: 8%;
+  margin-left: 8%;
+  margin-right: 4%;
+  width: 80px;
 }
 
-#bus-container{
-    /* background-image: url(canvas/road.svg); */
-    background-image: url(canvas/StraightRoad.svg);
-    background-size: cover;
-    background-size: 100% 100%;
-    height: 650px;
-    position: relative;
-    /* border: blue solid; */
-    margin-bottom: 10%;
-    position: relative;  /*optional*/
+#bus-container {
+  background-image: url(canvas/StraightRoad.svg);
+  background-size: cover;
+  background-size: 100% 100%;
+  height: 650px;
+  position: relative;
+  margin-bottom: 10%;
 }
 
-#school-bus{
-    position: absolute;
-    width: 150px;
-    /* border: red solid; */
+#school-bus {
+  position: absolute;
+  width: 150px;
 }
 
-#project{
+#project {
   width: 80%;
-  margin: auto;
+  margin: 10% auto;
   text-align: center;
-  color: #7D759F;
+  color: #7d759f;
 }
 
-.project-container{
+.project-container {
   text-align: left;
   background-color: rgba(255, 255, 255, 0.5);
   color: #666189;
@@ -193,28 +157,19 @@ h1{
   margin-bottom: 30px;
 }
 
-
-.line1{
+.line1 {
   font-weight: bold;
   font-size: 1.2em;
   display: inline-block;
   padding-bottom: 10px;
 }
 
-.line2{
-  
-  /* font-size: 1.2em; */
+.line2 {
   display: inline-block;
   padding-bottom: 10px;
 }
 
-/* .line3{
-  color: #2E75B6;
-  display: inline-block;
-  padding-bottom: 10px;
-} */
-
-.button{
+.button {
   background-color: #666189;
   padding: 1.2% 5%;
   border-radius: 5px;
@@ -225,7 +180,7 @@ h1{
   display: inline-block;
 }
 
-.line4{
+.line4 {
   font-family: monospace;
   padding: 3px;
   margin: 10px;
@@ -233,48 +188,39 @@ h1{
   color: black;
 }
 
-.project-container .thumbnail{
+.project-container .thumbnail {
   width: 35%;
   height: auto;
   margin-right: 5%;
-  /* border: red solid 3px; */
   object-fit: contain;
-  /* box-shadow: 2px 2px 4px gray; */
 }
 
-#contact{
-  /* height: 40vh; */
+#contact {
   color: white;
   text-align: center;
-  /* border: blue solid; */
 }
 
 .contact-icon {
-  width: 18%;
+  width: 100px;
 }
 
-#contact-container{
-  /* display: flex; */
-  /* border: blue solid; */
+#contact-container {
   flex-direction: row;
-  width: 80%;
+  width: 60%;
   margin: auto;
-  text-align: center;
+  text-align: left;
 }
 
-.contact-content{
+.contact-content {
   display: inline-block;
   width: 48%;
-  /* border: red solid; */
   margin-bottom: 5%;
 }
 
-.tooltiptext{
+.tooltiptext {
   position: absolute;
-  /* top: 5%; */  /*this will position the whole thing on top of page*/
-  /* transform: translate(0, -50%); */
-  
-  transform: scale(0,1);
+
+  transform: scale(0, 1);
   background-color: rgb(216, 216, 216);
   color: rgb(69, 69, 69);
   border-radius: 0 30px 30px 0;
@@ -282,29 +228,135 @@ h1{
   padding: 20px 30px;
   margin-top: 1.7%;
   margin-left: -1.5%;
-  font-family: 'Patrick Hand', cursive;
+  font-family: "Patrick Hand", cursive;
 }
 
-.contact-icon{
+.contact-icon {
   cursor: pointer;
 }
 
 .contact-icon:hover + .tooltiptext {
   visibility: visible;
-  transform: scale(1,1);
-  /* transform: translateY(40%); */
-  transition: transform 0.3s ease-in-out ;
+  transform: scale(1, 1);
+  transition: transform 0.3s ease-in-out;
   transform-origin: 0% 50%;
 }
 
-/* .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-} */
+@media only screen and (max-width: 1080px) {
+  #about,
+  #education {
+    width: 95%;
+    left: 0%;
+    height: auto;
+  }
+  #wrapper {
+    top: 15%;
+  }
 
-.sticky {
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
+  #contact-container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  #wrapper {
+    width: 90vw;
+    height: 90vw;
+    position: relative;
+    margin: auto;
+  }
+
+  #intro {
+    width: 80%;
+    height: auto;
+    margin: auto;
+  }
+
+  #intro h2 {
+    margin: auto;
+  }
+
+  .icon {
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+
+  #project {
+    width: 95%;
+  }
+
+  .contact-icon {
+    width: 80px;
+  }
+
+  .tooltiptext {
+    padding: 10px 15px;
+    margin-top: 2.5%;
+  }
+
+  #bus-container {
+    display: none;
+  }
+
+  #education {
+    height: auto;
+    position: relative;
+    margin: 15% auto;
+  }
+
+  #education h1 {
+    text-align: center;
+  }
+
+  .tooltiptext {
+    transform: scale(1, 1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 0.9em;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+  #about {
+    align-items: center;
+  }
+
+  #about h2 {
+    width: 90%;
+    font-size: 1em;
+  }
+
+  #profile-pic {
+    position: relative;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .project-container {
+    display: block;
+    text-align: center;
+  }
+
+  .project-container .thumbnail {
+    width: 80%;
+  }
+
+  .button {
+    font-size: 14px;
+  }
+
+  .contact-icon {
+    width: 60px;
+  }
+
+  .contact-content {
+    width: 90%;
+  }
 }
