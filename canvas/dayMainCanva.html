@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            object-fit: contain;
+            box-sizing: border-box;
+        }
+
+        /* body{
+            margin: 0;
+            box-sizing: border-box;
+        } */
+
+        /* #parallel{
+            background-color: var(--background-morning);
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #right{
+            height: 100%;
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
+
+        #wrapper{
+            position: relative;
+            min-width: 400px;
+            display: flex;
+        }
+
+        #wrapper img{
+            position: absolute;
+        }
+
+        #wrapper #base-layer{
+            width: 100%;
+            margin: auto;
+            position: relative;
+        }
+
+        #dog-body{
+            width: calc(5.06/20*100%);
+            bottom: 7%;
+            left: 23%;
+            z-index: 2;
+        }
+
+        #dog-tail{
+            width: calc(.69/20*100%);
+            bottom: 24.5%;
+            left: 22.3%;
+            z-index: 2;
+            transform-origin: 90% 100%;
+            animation-duration: 3.5s;
+            animation-name: wag;
+            animation-iteration-count: infinite;
+        }
+
+        #pyjamas{
+            width: calc(5.3/20*100%);
+            bottom: 14%;
+            left: 42.5%;
+            z-index: 1;
+        }
+
+        #shoe{
+            width: calc(1.78/20*100%);
+            bottom: 10%;
+            left: 43%;
+            z-index: index 0;
+            transform-origin: 70% 10%;
+            animation-duration: 1.5s;
+            animation-name: shake-leg;
+            animation-iteration-count: infinite;
+        }
+
+        #pot{
+            width: calc(1/20*100%);
+            bottom: 47%;
+            right: 16%;
+        }
+
+        #plant{
+            width: calc(3.7/20*100%);
+            bottom: 55%;
+            right: 9%;
+            transform-origin: 50% 100%;
+            animation-duration: 4s;
+            animation-name: shake-plant;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+        }
+
+
+        #marble{
+            width: calc(4/20*100%);
+            bottom: 38%;
+            right: 10%;
+        }
+
+        #huihui{
+            width: calc(3.91/20*100%);
+            bottom: 10%;
+            right: 9%;
+        }
+
+
+        #typing-hand{
+            width: calc(2.74/20*100%);
+            bottom: 47.7%;
+            left: 43%;
+            transform-origin: 20% 40%;
+            animation-duration: 0.8s;
+            animation-name: typing;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+        }
+
+        #tail{
+            width: calc(4.8/20*100%);
+            bottom: 31%;
+            right: 6%;
+            z-index: 1;
+        }
+
+        @keyframes wag {
+            0% {
+            transform: rotate(0);
+            }
+            8% {
+            transform: rotate(-55deg);
+            }
+            16% {
+            transform: rotate(0);
+            }
+            24% {
+                transform: rotate(-55deg);
+            }
+            36% {
+                transform: rotate(0);
+            }
+            40% {
+                transform: rotate(-55deg);
+            }
+            50% {
+                transform: rotate(0);
+            }
+        }
+
+        @keyframes shake-leg {
+            0% {
+                transform: rotate(10deg);
+            }
+            20% {
+                transform: rotate(20deg);
+            }
+            60% {
+                transform: rotate(10deg);
+            }
+            100% {
+                transform: rotate(10deg);
+            }
+        }
+
+        @keyframes shake-plant {
+            0% {
+                transform: rotate(-4deg);
+            }
+            50% {
+                transform: rotate(4deg);
+            }
+            100% {
+                transform: rotate(-4deg);
+            }
+        }
+
+        @keyframes typing {
+            0% {
+                transform: rotate(0);
+            }
+            15% {
+                transform: rotate(-15deg);
+            }
+            30% {
+                transform: rotate(0);
+            }
+            45% {
+                transform: rotate(-15deg);
+            }
+            60% {
+                transform: rotate(0);
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <img id="base-layer" src="image-morning/base-layer-morning-updated.svg" alt="">
+        <img id="dog-body" src="image-morning/dog.svg/dog.svg-1.svg" alt="">
+        <img id="dog-tail" src="image-morning/dog.svg/dog.svg-2.svg" alt="">
+        <img id="pyjamas" src="image-morning/pyjamas.svg/pyjamas.svg-2.svg" alt="">
+        <img id="shoe" src="image-morning/pyjamas.svg/pyjamas.svg-1.svg" alt="">
+        <img id="plant" src="image-morning/plant.svg/plant.svg-1.svg" alt="">
+        <img id="pot" src="image-morning/plant.svg/plant.svg-2.svg" alt="">
+        <img id="marble" src="image-morning/marble2.svg" alt="">
+        <img id="huihui" src="image-morning/huihui.svg" alt="">
+        <img id="typing-hand" src="image-morning/typing-hand.svg" alt="">
+        <img id="tail" src="image-morning/marble-tail.svg/marble-tail1.svg" alt="">
+    </div>
+    <script>
+        let tail = document.getElementById('tail')
+        let loopArr = [2,3,4,5,6,5,4,3,2,1]
+        let i = 0;
+
+        function animateTail(){
+            let draw = loopArr[i]
+            tail.src = "image-morning/marble-tail.svg/marble-tail" + `${draw}` + ".svg"
+            if(i == loopArr.length-1){i=0}
+            i++;
+        }
+        setInterval(animateTail, 90) 
+    </script>
+</body>
+</html>

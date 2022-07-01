@@ -1,0 +1,239 @@
+<html>
+    <head>
+        <script>
+            var time = Math.random();
+            var singleEle = document.querySelectorAll('#stars path');
+            // function setProperty(duration) {
+            //     singleEle.style.setProperty('--animation-time', duration +'s');
+            // }
+            //setInterval(setProperty(1), Math.floor(Math.random() * 5000))
+//             <script>
+// const element = document.getElementById("demo");
+// setInterval(function() {element.innerHTML += "Hello"}, 1000);
+// </script>
+        </script>
+        <style>
+            /* body{
+                background-color: rgb(62, 66, 95);
+            } */
+            #stars {
+                position: absolute;
+                width: 100%;
+                height: 20%;
+                width: calc(3.73/20*100%);
+                left: 12%;
+                top: 18%;
+            }
+
+            /* path {
+                opacity: 0%;
+                animation: flicker 8s ease infinite;
+                animation-delay: 2s;
+            } */
+
+
+            path{
+                opacity: 0%;
+                animation: flicker 8s ease infinite;
+                animation-delay: 1s;
+            }
+
+            @keyframes flicker {
+                0% {
+                    opacity: 0;
+                }
+                5% {
+                    opacity: 1;
+                }
+                10% {
+                    opacity: 0;
+                }
+            }
+
+            * {
+                object-fit: contain;
+                box-sizing: border-box;
+            }
+            
+            #wrapper2{
+                position: relative;
+                min-width: 400px;
+                display: flex;
+            }
+
+
+            #wrapper2 img{
+                position: absolute;
+            }
+
+            #wrapper2 #base-layer2{
+                width: 100%;
+                margin: auto;
+                position: relative;
+            }
+
+            #left-hand{
+                width: calc(2.4/21*100%);
+                bottom: 63%;
+                left: 41%;
+                transform-origin: 40% 80%;
+                animation-duration: 3s;
+                animation-name: left-hand;
+                animation-iteration-count: infinite;
+            }
+
+            #right-hand{
+                width: calc(2.46/21*100%);
+                bottom: 65%;
+                left: 54.2%;
+                transform-origin: 85% 80%;
+                animation-duration: 3.5s;
+                animation-name: right-hand;
+                animation-iteration-count: infinite;
+            }
+            
+            #plant{
+                width: calc(3.5/20*100%);
+                bottom: 55%;
+                right: 8%;
+                transform-origin: 50% 100%;
+                animation-duration: 4s;
+                animation-name: shake-plant;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in;
+            }
+
+
+            #pot{
+                width: calc(1/20*100%);
+                bottom: 47.5%;
+                right: 16%;
+            }
+
+
+            @keyframes shake-plant {
+                0% {
+                    transform: rotate(-4deg);
+                }
+                50% {
+                    transform: rotate(4deg);
+                }
+                100% {
+                    transform: rotate(-4deg);
+                }
+            }
+
+            #dog-head {
+                width: calc(3.43/20*100%);
+                bottom: 11%;
+                right: 3%;
+            }
+
+            #dog-body{
+                width: calc(4.55/20*100%);
+                bottom: 12%;
+                right: 11%;
+                transform-origin: 10% 100%;
+                animation-duration: 3s;
+                animation-name: dog-breathe;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in;
+                transform: scale(1.05);
+            }
+
+            @keyframes dog-breathe {
+                0% {
+                    transform: rotateX(15deg);
+                }
+                20% {
+                    transform: rotateX(0deg);
+                }
+                40% {
+                    transform: rotateX(15deg);
+                }
+                100% {
+                    transform: rotateX(15deg);
+                }
+            }
+
+            @keyframes left-hand {
+                0% {
+                    transform: rotate(0deg);
+                }
+                15% {
+                    transform: rotate(10deg);
+                }
+                30% {
+                    transform: rotate(0deg);
+                }
+                45% {
+                    transform: rotate(10deg);
+                }
+                60% {
+                    transform: rotate(0deg);
+                }
+            }
+
+            @keyframes right-hand {
+                0% {
+                    transform: rotate(0deg);
+                }
+                15% {
+                    transform: rotate(8deg);
+                }
+                30% {
+                    transform: rotate(0deg);
+                }
+                45% {
+                    transform: rotate(8deg);
+                }
+                60% {
+                    transform: rotate(0deg);
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="wrapper2">
+            <img id="base-layer2" src="image-night/base-layer-night.svg" alt="">
+            <img id="left-hand" src="image-night/left-hand.svg" alt="">
+            <img id="right-hand" src="image-night/right-hand.svg" alt="">
+            <img id="plant" src="image-night/plant.svg" alt="">
+            <img id="pot" src="image-night/pot.svg" alt="">
+            <img id="dog-body" src="image-night/dog-body.svg" alt="">
+            <img id="dog-head" src="image-night/dog-head.svg" alt="">
+
+                <svg id = "stars" viewBox="0 0 490 408" width="490" height="408" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden"><defs><clipPath id="clip0"><rect x="1228" y="302" width="490" height="408"/></clipPath></defs>
+                    <g clip-path="url(#clip0)" transform="translate(-1228 -302)">
+                        <path d="M1409 341.5C1409 336.806 1412.81 333 1417.5 333 1422.19 333 1426 336.806 1426 341.5 1426 346.194 1422.19 350 1417.5 350 1412.81 350 1409 346.194 1409 341.5Z" fill="#D5FFF3" fill-rule="evenodd" fill-opacity="1"/>
+                        <path d="M1245 635.5C1245 630.806 1248.81 627 1253.5 627 1258.19 627 1262 630.806 1262 635.5 1262 640.194 1258.19 644 1253.5 644 1248.81 644 1245 640.194 1245 635.5Z" fill="#D5FFF3" fill-rule="evenodd" fill-opacity="1"/>
+                        <path d="M1545 449.5C1545 444.806 1548.81 441 1553.5 441 1558.19 441 1562 444.806 1562 449.5 1562 454.194 1558.19 458 1553.5 458 1548.81 458 1545 454.194 1545 449.5Z" fill="#D5FFF3" fill-rule="evenodd" fill-opacity="1"/>
+                        <path d="M1676 372.5C1676 367.806 1679.81 364 1684.5 364 1689.19 364 1693 367.806 1693 372.5 1693 377.194 1689.19 381 1684.5 381 1679.81 381 1676 377.194 1676 372.5Z" fill="#D5FFF3" fill-rule="evenodd" fill-opacity="1"/>
+                        <path d="M1329 635.5C1329 630.806 1332.81 627 1337.5 627 1342.19 627 1346 630.806 1346 635.5 1346 640.194 1342.19 644 1337.5 644 1332.81 644 1329 640.194 1329 635.5Z" fill="#D5FFF3" fill-rule="evenodd" fill-opacity="1"/>
+                        <path d="M1548 351.5C1548 346.806 1551.81 343 1556.5 343 1561.19 343 1565 346.806 1565 351.5 1565 356.194 1561.19 360 1556.5 360 1551.81 360 1548 356.194 1548 351.5Z" fill="#D5FFF3" fill-rule="evenodd" fill-opacity="1"/>
+                        <path d="M1698 433C1698 428.582 1701.81 425 1706.5 425 1711.19 425 1715 428.582 1715 433 1715 437.418 1711.19 441 1706.5 441 1701.81 441 1698 437.418 1698 433Z" fill="#D5FFF3" fill-rule="evenodd" fill-opacity="1"/>
+                        <path d="M1274 690.5C1274 685.806 1277.81 682 1282.5 682 1287.19 682 1291 685.806 1291 690.5 1291 695.194 1287.19 699 1282.5 699 1277.81 699 1274 695.194 1274 690.5Z" fill="#D5FFF3" fill-rule="evenodd" fill-opacity="1"/>
+                        <path d="M1589 653.5C1589 648.805 1592.81 645 1597.5 645 1602.19 645 1606 648.805 1606 653.5 1606 658.194 1602.19 662 1597.5 662 1592.81 662 1589 658.194 1589 653.5Z" fill="#D5FFF3" fill-rule="evenodd" fill-opacity="1"/>
+                        <path d="M1674 698C1674 693.582 1677.81 690 1682.5 690 1687.19 690 1691 693.582 1691 698 1691 702.418 1687.19 706 1682.5 706 1677.81 706 1674 702.418 1674 698Z" fill="#D5FFF3" fill-rule="evenodd" fill-opacity="1"/>
+                        <path d="M1254 311.5C1254 306.805 1257.58 303 1262 303 1266.42 303 1270 306.805 1270 311.5 1270 316.194 1266.42 320 1262 320 1257.58 320 1254 316.194 1254 311.5Z" fill="#D5FFF3" fill-rule="evenodd" fill-opacity="1"/>
+                        <path d="M1589 404.5C1589 399.806 1592.81 396 1597.5 396 1602.19 396 1606 399.806 1606 404.5 1606 409.194 1602.19 413 1597.5 413 1592.81 413 1589 409.194 1589 404.5Z" fill="#D5FFF3" fill-rule="evenodd" fill-opacity="1"/>
+                        <path d="M1383 387.5C1383 382.806 1386.81 379 1391.5 379 1396.19 379 1400 382.806 1400 387.5 1400 392.194 1396.19 396 1391.5 396 1386.81 396 1383 392.194 1383 387.5Z" fill="#D5FFF3" fill-rule="evenodd" fill-opacity="1"/>
+                        <path d="M1231 430C1231 425.582 1234.81 422 1239.5 422 1244.19 422 1248 425.582 1248 430 1248 434.418 1244.19 438 1239.5 438 1234.81 438 1231 434.418 1231 430Z" fill="#D5FFF3" fill-rule="evenodd" fill-opacity="1"/>
+                        <path d="M1309 366.5C1309 361.805 1312.58 358 1317 358 1321.42 358 1325 361.805 1325 366.5 1325 371.194 1321.42 375 1317 375 1312.58 375 1309 371.194 1309 366.5Z" fill="#D5FFF3" fill-rule="evenodd" fill-opacity="1"/>
+                        <path d="M1434 455.5C1434 450.806 1437.81 447 1442.5 447 1447.19 447 1451 450.806 1451 455.5 1451 460.194 1447.19 464 1442.5 464 1437.81 464 1434 460.194 1434 455.5Z" fill="#D5FFF3" fill-rule="evenodd" fill-opacity="1"/>
+                    </g>
+                </svg>
+            
+        </div>
+        <script>
+            var star = document.querySelectorAll('path');
+            for (let i = 0; i < star.length; i++) {
+                let time = Math.random()*15;
+                let blinkDuration = Math.random()*8 + 4;
+                star[i].style.animation = "flicker " + `${blinkDuration}` + "s ease infinite";
+                star[i].style.animationDelay = `${time}s`;
+            }
+        </script>
+    </body>
+</html>
