@@ -6,32 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alison Portfolio</title>
     <link rel="stylesheet" href="mainStyle.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Patrick+Hand&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
   </head>
-
   <body>
-
-    <!-- NAVBAR -->
-    <nav>
+    <div class="navbar">
       <img id="logo" src="canvas/logo.svg" />
-      <a class="" href="#about">About</a>
-      <a class="" href="#education">Education</a>
-      <a class="" href="#project">Project</a>
-      <a class="" href="#contact">Contact</a>
-      <img onclick="changeMode()" id="mode-img" src="canvas/moon.svg"/>
-      <i id="bar" onclick="openMenu()" class="fa fa-bars"></i>
-    </nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#project">Project</a>
+      <a href="#contact">Contact</a>
+      <img onclick="changeMode()" id="mode-img" src="canvas/moon.svg" />
+    </div>
 
     <!-- INTRO -->
     <div id="intro">
-      <h1>Ola!  I'm <nobr>Alison Tan</nobr></h1>
+      <h1>Ola! I'm Alison Tan</h1>
       <h2>
         Currently studying Master of Software Engineering at University
         Teknologi Malaysia
       </h2>
     </div>
-
     <div id="wrapper">
       <object
         id="mainCanva"
@@ -43,14 +40,14 @@
     <!-- ABOUT -->
     <div id="about">
       <h1>About</h1>
-      <img id="profile-pic" src="canvas/profile-pic.jpg" alt="my profile picture" />
-      <p>
+      <img id="profile-pic" src="canvas/profile-pic.jpg" alt="" />
+      <h2>
         My passion in digital and software grow immensely when I was exposed to
         GIS and Remote Sensing while completing my final year project back in
         2020. As I worked on various statistical software, I got more interested
         to understand deeper on how things work.
         <br /><br />
-        I started off with a textbook from my friend about Software Engineering,
+        I started of with a textbook from my friend about Software Engineering,
         then started experimenting with some coding sandbox like W3School and
         FreeCodeCamp, and eventually pursue my masters to strengthen my
         knowledge.
@@ -61,135 +58,183 @@
         in VSCode. Recently, I've been really into game development in Unity,
         especially when it comes to creating 3D models from scratch using
         ProBuilder.
-
-      </p>
+        <br /><br />
+      </h2>
     </div>
 
     <!-- EDUCATION -->
     <div id="education">
-      <div id="bus-container">
-        <img src="canvas/StraightRoad.svg" id="road" alt="">  
-        <img src="canvas/bus.svg" id="school-bus" alt="">
-      </div>
-      
-      <div id="education-text-container">
-        <h1>Education Journey</h1>
-        <br>
-        <div id="edu-container">
-          <div class="edu-content">
-            <img class="icon" src="canvas/coding-icon.svg" alt="" />
-            <p>
-              <span class="line1">Master of Software Engineering </span><br />
-              <span class="line2">Universiti Teknologi Malaysia, KL</span> <br />
-            </p>
-          </div>
-          <div class="edu-content">
-            <img class="icon" src="canvas/rocket-icon.svg" alt="" />
-            <p>
-              <span class="line1">Internship</span> <br />
-              <span class="line2">Malaysian Space Agency, KL</span>
-            </p>
-          </div>
-          <div class="edu-content">
-            <img class="icon" src="canvas/anchor-icon.svg" alt="" />
-            <p>
-              <span class="line1">Bachelor Degree of Marine Science</span> <br />
-              <span class="line2">Universiti Malaysia Sabah, KK</span> <br />
-            </p>
-          </div>
+      <h1>Education Journey</h1>
+      <br />
+      <div id="edu-container">
+        <div class="edu-content">
+          <img class="icon" src="canvas/coding-icon.svg" alt="" />
+          <p>
+            <span class="line1">Master of Software Engineering </span><br />
+            <span class="line2">Universiti Teknologi Malaysia, KL</span> <br />
+          </p>
+        </div>
+        <div class="edu-content">
+          <img class="icon" src="canvas/rocket-icon.svg" alt="" />
+          <p>
+            <span class="line1">Internship</span> <br />
+            <span class="line2">Malaysian Space Agency, KL</span>
+          </p>
+        </div>
+        <div class="edu-content">
+          <img class="icon" src="canvas/anchor-icon.svg" alt="" />
+          <p>
+            <span class="line1">Bachelor Degree of Marine Science</span> <br />
+            <span class="line2">Universiti Malaysia Sabah, KK</span> <br />
+          </p>
         </div>
       </div>
     </div>
 
+    <div id="bus-container">
+      <img src="canvas/bus.svg" id="school-bus" alt="" />
+    </div>
+
+    <br /><br />
 
     <!-- MINI PROJECT -->
     <div id="project">
       <h1>Mini Projects</h1>
-      <br>
-      <div class="project-content">
-        <img class="thumbnail" src="canvas/project thumbnail/unity3d-thumbnail.png" alt="disney" />
+
+      <div class="project-container">
+        <img
+          class="thumbnail"
+          src="canvas/project thumbnail/unity3d-thumbnail.png"
+          alt="disney"
+        />
         <p>
-          <span class="line1"> Work Hazard Simulation </span> <br />
+          <span class="line1"> WORK HAZARD SIMULATION </span> <br />
           <span class="line2">
             This is a 3D game I created in Unity. Most of the 3D assets/models
             were created from scratch using ProBuilder. The scripts for the
             functionality is written using C#.
           </span>
           <br />
-          <button class="button" href="https://alison-97.github.io/Work-hazard-simulation/" >Play Game</button >
-          <button class="button" href="video/work hazard demo video.mp4" >Play demo video</button >
+          <a
+            class="button"
+            href="https://alison-97.github.io/Work-hazard-simulation/"
+            >Play Game</a
+          >
+          <a class="button" href="video/work hazard demo video.mp4"
+            >Play demo video</a
+          >
           <br />
           <span class="line4"> Unity </span> <span class="line4"> C# </span>
           <span class="line4"> ProBuilder </span>
         </p>
       </div>
 
-      <div class="project-content">
-        <img class="thumbnail" src="canvas/project thumbnail/MonsterChase-thumbnail.png" alt="disney" />
+      <div class="project-container">
+        <img
+          class="thumbnail"
+          src="canvas/project thumbnail/MonsterChase-thumbnail.png"
+          alt="disney"
+        />
         <p>
-          <span class="line1"> Monster Chase Game </span> <br />
+          <span class="line1"> MONSTER CHASE GAME </span> <br />
           <span class="line2">
             This is the first 2D game I created in Unity. The graphic sprites of
             all characters were made of SVG using PowerPoint and animated in
             Unity.
           </span>
           <br />
-          <button class="button" href="https://alison-97.github.io/Monster-Chase/" >Play Game</button >
-          <button class="button" href="video/monster chase demo video.mp4" >Play demo video</button >
+          <a class="button" href="https://alison-97.github.io/Monster-Chase/"
+            >Play Game</a
+          >
+          <a class="button" href="video/monster chase demo video.mp4"
+            >Play demo video</a
+          >
           <br />
           <span class="line4"> Unity </span> <span class="line4"> C# </span>
           <span class="line4"> Sprite animation </span>
         </p>
       </div>
 
-      <div class="project-content">
-        <img class="thumbnail" src="canvas/project thumbnail/vmcs-thumbnail.png" alt="disney" />
+      <div class="project-container">
+        <img
+          class="thumbnail"
+          src="canvas/project thumbnail/vmcs-thumbnail.png"
+          alt="disney"
+        />
         <p>
-          <span class="line1"> Vending Machine Simulator </span> <br />
+          <span class="line1"> VENDING MACHNINE SIMULATOR </span> <br />
           <span class="line2">
             The software simulates a Vending Machine Control System (VMCS). It
             is a school assignment submitted to fullfill part of the
             requirements for the Software Design subject in UTM.
           </span>
           <br />
-          <button class="button" href="https://alison-97.github.io/vending-machine-simulator-MSE/" >Play simulator</button >
-          <button class="button" href="https://github.com/Alison-97/vending-machine-simulator-MSE" >Source Code</button >
+          <a
+            class="button"
+            href="https://alison-97.github.io/vending-machine-simulator-MSE/"
+            >Play simulator</a
+          >
+          <a
+            class="button"
+            href="https://github.com/Alison-97/vending-machine-simulator-MSE"
+            >Source Code</a
+          >
           <br />
           <span class="line4"> HTML </span> <span class="line4"> JQuery </span>
           <span class="line4"> Bootstrap </span>
         </p>
       </div>
 
-      <div class="project-content">
-        <img class="thumbnail" src="canvas/project thumbnail/tetris-thumbnail.png" alt="disney" />
+      <div class="project-container">
+        <img
+          class="thumbnail"
+          src="canvas/project thumbnail/tetris-thumbnail.png"
+          alt="disney"
+        />
         <p>
-          <span class="line1"> Simple Tetris </span> <br />
+          <span class="line1"> SIMPLE TETRIS </span> <br />
           <span class="line2">
             I consider this as my first project of using Vanilla JS. The LOC is
-            crazy as I'm trying to account for all feasible rotations and kickings
+            crazy as Im trying to account for all feasible rotations and kicking
             of the Tetrominoes.
           </span>
           <br />
-          <button class="button" href="https://alison-97.github.io/Tetris-Game/" >Play game</button >
-          <button class="button" href="https://github.com/Alison-97/Tetris-Game" >Source Code</button >
+          <a class="button" href="https://alison-97.github.io/Tetris-Game/"
+            >Play game</a
+          >
+          <a class="button" href="https://github.com/Alison-97/Tetris-Game"
+            >Source Code</a
+          >
           <br />
           <span class="line4"> HTML </span> <span class="line4"> CSS </span>
           <span class="line4"> Javascript </span>
         </p>
       </div>
 
-      <div class="project-content">
-        <img class="thumbnail" src="canvas/project thumbnail/quoteMachine-thumbnail.png" alt="disney" />
+      <div class="project-container">
+        <img
+          class="thumbnail"
+          src="canvas/project thumbnail/quoteMachine-thumbnail.png"
+          alt="disney"
+        />
         <p>
-          <span class="line1"> Random Quote Machine </span> <br />
+          <span class="line1"> RANDOM QUOTE MACHINE </span> <br />
           <span class="line2">
             This is created as part of the FreeCodeCamp curriculum. Animated
             SVGs are included as React component. The color scheme changes as
             random quote is being rendered.
           </span>
           <br />
-          <button class="button" href="https://alison-97.github.io/random-quote-machine/" >Visit Page</button >
-          <button class="button" href="https://github.com/Alison-97/random-quote-machine" >Source Code</button >
+          <a
+            class="button"
+            href="https://alison-97.github.io/random-quote-machine/"
+            >Visit Page</a
+          >
+          <a
+            class="button"
+            href="https://github.com/Alison-97/random-quote-machine"
+            >Source Code</a
+          >
           <br />
           <span class="line4"> HTML </span> <span class="line4"> CSS </span>
           <span class="line4"> Javascript </span>
@@ -197,18 +242,26 @@
         </p>
       </div>
 
-      <div class="project-content">
-        <img class="thumbnail" src="canvas/project thumbnail/tribute-thumbnail.png" alt="disney" />
+      <div class="project-container">
+        <img
+          class="thumbnail"
+          src="canvas/project thumbnail/tribute-thumbnail.png"
+          alt="disney"
+        />
         <p>
-          <span class="line1"> Walt Disney Tribute Page </span> <br />
+          <span class="line1"> WALT DISNEY TRIBUTE PAGE </span> <br />
           <span class="line2">
             This simple tribute page was create from scratch using HTML and CSS
             as part of the FreeCodeCamp challenge. Features like parallel
             scrolling and horizontal scroll were included.
           </span>
           <br />
-          <button class="button" href="https://alison-97.github.io/Tribute-Page/" >Visit Page</button >
-          <button class="button" href="https://github.com/Alison-97/Tribute-Page" >Source Code</button >
+          <a class="button" href="https://alison-97.github.io/Tribute-Page/"
+            >Visit Page</a
+          >
+          <a class="button" href="https://github.com/Alison-97/Tribute-Page"
+            >Source Code</a
+          >
           <br />
           <span class="line4"> HTML </span> <span class="line4"> CSS </span>
           <span class="line4"> Javascript </span>
@@ -216,29 +269,64 @@
       </div>
     </div>
 
-<!-- CONTACT -->
+    <br />
+    <br />
+
     <div id="contact">
       <h1>Contact</h1>
-      <br>
+      <!-- 
+      
+      
+       -->
       <div id="contact-container">
-        <div class="contact-content" onclick="location.href='https://github.com/Alison-97';">
-          <img class="contact-icon-color" src="canvas/contact icon/github2.png"/>
-          <img class="contact-icon" id="github" src="canvas/contact icon/github1.png" onmouseover="hover(this);" onmouseout="unhover(this);" />
+        <div class="contact-content">
+          <img
+            onclick="location.href='https://github.com/Alison-97';"
+            class="contact-icon"
+            id="github"
+            src="canvas/contact icon/github1.png"
+            alt=""
+            onmouseover="hover(this);"
+            onmouseout="unhover(this);"
+          />
           <span class="tooltiptext">https://github.com/Alison-97</span>
         </div>
-        <div class="contact-content" onclick="location.href='https://www.linkedin.com/in/alisontan/';">
-          <img class="contact-icon-color" src="canvas/contact icon/linkedin2.png"/>
-          <img class="contact-icon" id="linkedin" src="canvas/contact icon/linkedin1.png" alt="" onmouseover="hover(this);" onmouseout="unhover(this);" />
-          <span class="tooltiptext" >https://www.linkedin.com/in/alisontan/</span >
+        <div class="contact-content">
+          <img
+            onclick="location.href='https://www.linkedin.com/in/alisontan/';"
+            class="contact-icon"
+            id="linkedin"
+            src="canvas/contact icon/linkedin1.png"
+            alt=""
+            onmouseover="hover(this);"
+            onmouseout="unhover(this);"
+          />
+          <span class="tooltiptext"
+            >https://www.linkedin.com/in/alisontan/</span
+          >
         </div>
-        <div class="contact-content" onclick="location.href='mailto:alisontan97@yahoo.com';">
-          <img class="contact-icon-color" src="canvas/contact icon/mail2.png"/>
-          <img class="contact-icon" id="mail" src="canvas/contact icon/mail1.png" alt="" onmouseover="hover(this);" onmouseout="unhover(this);" />
+        <div class="contact-content">
+          <img
+            onclick="location.href='mailto:alisontan97@yahoo.com';"
+            class="contact-icon"
+            id="mail"
+            src="canvas/contact icon/mail1.png"
+            alt=""
+            onmouseover="hover(this);"
+            onmouseout="unhover(this);"
+          />
           <span class="tooltiptext">alisontan97@yahoo.com</span>
         </div>
-        <div class="contact-content" onclick="location.href='https://wa.me/60165478363';">
-          <img class="contact-icon-color" src="canvas/contact icon/ws2.png"/>
-          <img class="contact-icon" id="whatsapp" src="canvas/contact icon/ws1.png" alt="" onmouseover="hover(this);" onmouseout="unhover(this);" />
+        <div class="contact-content">
+          <img
+            onclick="location.href='https://wa.me/60165478363';"
+            class="contact-icon"
+            id="whatsapp"
+            src="canvas/contact icon/ws1.png"
+            alt=""
+            onmouseover="hover(this);"
+            onmouseout="unhover(this);"
+          />
           <span class="tooltiptext">https://wa.me/60165478363</span>
         </div>
       </div>
@@ -248,4 +336,4 @@
   </body>
 </html>
 
-<!-- we need br under last 3 section cz their h1 has margin of 0 and there's no h2 margin acting as a gap -->
+<!-- I've acquired skills in digital mapping, multispectral imagery classification, and other GIS techniques. -->
